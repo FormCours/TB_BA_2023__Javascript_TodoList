@@ -46,6 +46,10 @@
 
 }
 
+.task-finish {
+  background-color: #ffc0cb42;
+}
+
 .priority-low {
   color: cornflowerblue;
 }

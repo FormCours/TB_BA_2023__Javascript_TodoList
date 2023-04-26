@@ -25,6 +25,11 @@ function displayTodoList() {
     taskNode.classList.add('task')
     taskNode.append(taskInfo, taskButtons);
 
+    // Ajout de la classe "task-finish" si la tache est terminé
+    if(task.isDone) {
+      taskNode.classList.add('task-finish')
+    }
+
     // Injection dans la balise "container-tasks"
     containerTasks.appendChild(taskNode);
   }
