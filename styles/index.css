@@ -1,0 +1,55 @@
+.btn-finish {
+  background-color: forestgreen;
+  color: snow;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+.btn-finish:disabled {
+  background-color: gray;
+}
+
+.btn-delete {
+  background-color: crimson;
+  color: snow;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: black solid 1px
+}
+
+.task-info {
+  flex-grow: 1;
+}
+
+.task-info p:nth-child(1) {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.task-info p:nth-child(3) {
+  margin-top: 0.4rem;
+  color: grey;
+}
+
+.task-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+}
+
+.priority-low {
+  color: cornflowerblue;
+}
+
+.priority-high {
+  color: crimson;
+}

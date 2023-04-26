@@ -22,6 +22,7 @@ function displayTodoList() {
 
     // Création d'un noeud HTML pour réprésenter une tache
     const taskNode = document.createElement('li');
+    taskNode.classList.add('task')
     taskNode.append(taskInfo, taskButtons);
 
     // Injection dans la balise "container-tasks"
@@ -33,6 +34,7 @@ displayTodoList();
 // Fonction pour générer une div avec les informations d'une tache
 function createTaskInfo(task) {
   const taskInfo = document.createElement('div');
+  taskInfo.classList.add('task-info')
 
   const taskName = document.createElement('p');
   taskName.innerText = task.name;
@@ -40,6 +42,7 @@ function createTaskInfo(task) {
 
   const taskPriority = document.createElement('p');
   taskPriority.innerText = (task.priority === 'low') ? 'Priorité basse' : 'Priorité haute';
+  taskPriority.className = (task.priority === 'low') ? 'priority-low' : 'priority-high';
   taskInfo.appendChild(taskPriority);
 
   if (task.limitDate) {
@@ -54,9 +57,11 @@ function createTaskInfo(task) {
 // Fonction pour générer une div avec les boutons
 function createTaskBtn(task, index) {
   const taskButtons = document.createElement('div');
+  taskButtons.classList.add('task-buttons')
 
   const taskBtnFinish = document.createElement('button');
   taskBtnFinish.innerText = 'Finalisé';
+  taskBtnFinish.classList.add('btn-finish')
   if (task.isDone) {
     taskBtnFinish.setAttribute('disabled', '');
   }
@@ -67,6 +72,7 @@ function createTaskBtn(task, index) {
 
   const taskBtnDelete = document.createElement('button');
   taskBtnDelete.innerText = 'Supprimer';
+  taskBtnDelete.classList.add('btn-delete')
   taskBtnDelete.addEventListener('click', function () {
     handleDeleteTask(index);
   });
